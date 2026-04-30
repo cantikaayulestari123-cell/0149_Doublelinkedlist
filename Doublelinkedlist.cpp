@@ -71,7 +71,8 @@ public:
     }
 
     // Step 9: Insert between current and curent->next
-    newNode->next = current->next // Step 9a: newNode.next = current.next
+    newNode->next = current->next;// Step 9a: newNode.next = current.next
+    newNode->prev = current;      // Step 9b: newNode.prev = current
 
 }
     
