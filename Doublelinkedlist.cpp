@@ -1,4 +1,6 @@
+// 0149_DoubleLinkedList
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Node 
@@ -80,6 +82,16 @@ public:
 
     current->next = newNode; // Step 9d: current.next = newNode
 }
+
+void hapus()
+{
+    if (START == NULL)
+    {
+        cout << "\nList is empty" << endl;
+        return;
+    }
+}
+
         
 
 }
