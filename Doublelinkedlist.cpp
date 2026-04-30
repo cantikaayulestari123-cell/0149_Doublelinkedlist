@@ -70,5 +70,8 @@ public:
         return;
     }
 
+    // Step 9: Insert between current and curent->next
+    newNode->next = current->next // Step 9a: newNode.next = current.next
+
 }
     
