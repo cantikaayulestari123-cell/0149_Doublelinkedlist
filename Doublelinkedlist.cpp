@@ -90,9 +90,62 @@ void hapus()
         cout << "\nList is empty" << endl;
         return;
     }
+
+     cout << "\nEnter the roll number of the student whose record is to be deleted: ";
+        int rollNo;
+        cin >> rollNo;
+
+        Node *current = START;
+
+        while (current != NULL && current->noMhs != rollNo)
+            current = current->next;
+
+        if (current == NULL)
+        {
+            cout << "Record not found" << endl;
+            return;
+        }
+
+        if (current == START)
+        {
+            START = current->next;
+            if (START != NULL)
+                START->prev = NULL;
+        }
+        else
+        {
+            current->prev->next = current->next;
+
+            if (current->next != NULL)
+                current->next->prev = current->prev;
+        }
+
+        delete current;
+        cout << "Record with roll number " << rollNo << " deleted" << endl;
+    }
+
+    void traverse()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        Node *currentNode = START;
+
+        cout << "\nRecords in ascending order of roll number are:\n";
+        int i = 0;
+
+        while (currentNode != NULL)
+        {
+            cout << i + 1 << ". " << currentNode->noMhs << " " << endl;
+            currentNode = currentNode->next;
+            i++;
+        }
 }
 
         
 
-}
+
     
