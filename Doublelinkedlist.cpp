@@ -28,9 +28,9 @@ public:
         cin >> nim;
     
     //Step 1: Allocate the memory for new node
-    Node* newnode = new Node();
+    Node* newNode = new Node();
     //Step 2: Assign the value to data fields
-    newnode->noMhs = nim;
+    newNode->noMhs = nim;
 
     //Step 3: Insert at beginning if list is empty or nim is smallest
     if (START == NULL || nim <= START->noMhs) 
@@ -39,6 +39,8 @@ public:
        {
             cout << "\nDuplicate number not allowed" << endl;
             return;
-       }  
+       } 
+       //step 4: newNode.next = START
+       newNode->next = START;
 }
     
