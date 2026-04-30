@@ -1,14 +1,22 @@
 #include <iostream>
 using namespace std;
 
-class Node {
+class Node 
+{
 public:
-    int no;
-    Node* next;
-    Node* prev;
+    int noMhs;
+    Node *next;
+    Node *prev;
 };
 
-class DoubleLinkedList {
+class DoubleLinkedList 
+{
 private:
-    Node* START;
-};
+    Node *START;
+
+
+public:
+    DoubleLinkedList()
+    {
+        START = NULL;
+    }
